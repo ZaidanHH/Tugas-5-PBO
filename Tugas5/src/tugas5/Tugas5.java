@@ -25,8 +25,8 @@ String user = "root";
 String password = "";
 try {
 Class.forName(driver);
-String query = "SELECT a.LAST_NAME AS 'Employee', b.LAST_NAME AS 'Manager' \n"
-        + "FROM employees a,employees b "
+String query = "SELECT a.LAST_NAME AS Employee, b.LAST_NAME AS Manager \n"
+        + "FROM employees a,employees b"
         + "WHERE a.MANAGER_ID = b.EMPLOYEE_ID";
 try (
 Connection con =
